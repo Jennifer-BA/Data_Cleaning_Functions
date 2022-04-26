@@ -2,6 +2,7 @@ import pandas as pd
 
 
 def cols_to_datetime(df, date_time_columns, unix_epoch_columns):
+    """Returns a dataframe with date/time columns and/or Unix epoch columns converted to datetime"""
     
     for col in date_time_columns:
         df[col] = pd.to_datetime(df[col])
